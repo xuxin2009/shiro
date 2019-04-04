@@ -9,7 +9,11 @@
   <display-name>Archetype Created Web Application</display-name>
 
 
-
+  <!--spring beans 配置文件的位置-->
+  <context-param>
+    <param-name>contextConfigLocation</param-name>
+    <param-value>classpath:applicationContext.xml</param-value>
+  </context-param>
   <!--监听web容器的启动和关闭-->
   <listener>
     <listener-class>org.springframework.web.context.request.RequestContextListener</listener-class>
@@ -19,11 +23,7 @@
     <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
   </listener>
 
-  <!--spring beans 配置文件的位置-->
-  <context-param>
-    <param-name>contextConfigLocation</param-name>
-    <param-value>classpath:applicationContext.xml</param-value>
-  </context-param>
+
   <!--spring mvc 配置-->
 <servlet>
   <servlet-name>spring</servlet-name>
