@@ -17,11 +17,11 @@ public class JsonData {
 
     private  Object data;
 
-    private boolean ret;
+    private boolean isSuccess;
 
     public JsonData(boolean ret)
     {
-        this.ret = ret;
+        this.isSuccess = ret;
     }
     public static JsonData success(Object data,String msg)
     {
@@ -57,7 +57,7 @@ public class JsonData {
     public Map<String,Object> toMap()
     {
         Map<String,Object> result = new HashMap<>();
-        result.put("ret",ret);
+        result.put("ret",isSuccess);
         result.put("msg",msg);
         result.put("data",data);
         return result;
